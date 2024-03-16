@@ -14,12 +14,17 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(uuid())
-  name      String
-  email     String   @unique
+  id    String @id @default(uuid())
+  name  String
+  email String @unique
+
+  stripeCustomerId     String?
+  stripeSubscriptionId String?
+
+  todos Todo[]
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  todos     Todo[]
 }
 
 model Todo {

@@ -23,3 +23,7 @@ x-user-id: e7cc9b6a-a72e-47ae-939e-ec772975df60
 {
   "title": "Minha primeira tarefa"
 }
+
+###
+POST http://localhost:3000/checkout
+x-user-id: e7cc9b6a-a72e-47ae-939e-ec772975df60
