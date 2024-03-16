@@ -1,1 +1,16 @@
 GET http://localhost:3000
+
+###
+GET http://localhost:3000/users
+
+###
+GET http://localhost:3000/users/e7cc9b6a-a72e-47ae-939e-ec772975df60
+
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@provider.com.br"
+}
