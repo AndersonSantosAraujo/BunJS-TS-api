@@ -19,12 +19,17 @@ model User {
   email     String   @unique
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  todos     Todo[]
 }
 
 model Todo {
-  id        String   @id @default(uuid())
-  title     String
-  done      Boolean  @default(false)
+  id    String  @id @default(uuid())
+  title String
+  done  Boolean @default(false)
+
+  owner   User   @relation(fields: [ownerId], references: [id])
+  ownerId String
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

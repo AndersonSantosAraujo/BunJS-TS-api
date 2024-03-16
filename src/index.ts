@@ -5,6 +5,7 @@ import {
   findOneUserController,
   listUsersController,
 } from "./controllers/user.controller";
+import { createTodoController } from "./controllers/todo.controller";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -21,6 +22,8 @@ app.get("/users", listUsersController);
 app.get("/users/:userId", findOneUserController);
 
 app.post("/users", createUserController);
+
+app.post("/todos", createTodoController);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port http://localhost:${PORT}`);
