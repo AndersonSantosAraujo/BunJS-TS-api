@@ -11,19 +11,19 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "name": "John Doe",
-  "email": "john@provider.com.br"
+  "name": "Jane Doe",
+  "email": "jane@provider.com.br"
 }
 
 ###
 POST http://localhost:3000/todos
 Content-Type: application/json
-x-user-id: 131d80c1-af0f-4d94-bc74-56725a587215
+x-user-id: eee618f2-2df8-4a62-848f-8d9d4cee7049
 
 {
-  "title": "Minha primeira tarefa"
+  "title": "Task #6"
 }
 
 ###
 POST http://localhost:3000/checkout
-x-user-id: 131d80c1-af0f-4d94-bc74-56725a587215
+x-user-id: eee618f2-2df8-4a62-848f-8d9d4cee7049
