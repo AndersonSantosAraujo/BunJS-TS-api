@@ -3,7 +3,8 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun --watch src/index.ts"
+    "dev": "bun --watch src/index.ts",
+    "stripe": "stripe listen --forward-to localhost:3000/stripe"
   },
   "devDependencies": {
     "@types/bun": "latest",

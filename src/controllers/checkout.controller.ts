@@ -26,7 +26,7 @@ export const createCheckoutController = async (
     });
   }
 
-  const checkout = await createCheckoutSession(user.id);
+  const checkout = await createCheckoutSession(user.id, user.email);
 
   return response.send({ checkout });
 };

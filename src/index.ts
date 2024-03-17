@@ -7,9 +7,17 @@ import {
 } from "./controllers/user.controller";
 import { createTodoController } from "./controllers/todo.controller";
 import { createCheckoutController } from "./controllers/checkout.controller";
+import { stripeWebhookController } from "./controllers/stripe.controller";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// payment (precisa ser antes do parser do json)
+app.post(
+  "/stripe",
+  express.raw({ type: "application/json" }),
+  stripeWebhookController,
+);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
